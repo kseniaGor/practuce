@@ -23,5 +23,23 @@ namespace WpfApp6
         {
             InitializeComponent();
         }
+        private void Click_login(object sender, RoutedEventArgs e)
+        {
+            var login = loginBox.Text; var password = passwordBox.Text;
+            var context = new AppDbContext();
+            var user = context.Users.SingleOrDefault(x => x.login == login && x.password == password); if (user is null)
+            {
+                result_text.Text = "Неправильный логин или пароль!";
+            }
+            else
+            {
+                result_text.Text = "Вы успешно вошли в аккаунт!";
+            }
+        }
+        private void switch_Click(object sender, RoutedEventArgs e)
+        {
+            Window1 form = new Window1();
+            form.Show(); this.Close();
+        }
     }
 }

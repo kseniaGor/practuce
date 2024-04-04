@@ -5,8 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp6"
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="800">
+        Title="Window1" Height="450" Width="800" Background="Pink">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="loginBox" TextAlignment="Center" Grid.Column="1" Grid.Row="1" Height="30" FontSize="16" />
+        <TextBox Name="passwordBox" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" Height="30" FontSize="16"  />
+        <TextBlock Name="result_text" Text="зайдите в систему" Grid.Column="1" FontSize="20" HorizontalAlignment="Center"  VerticalAlignment="Center"  Background="Pink" Grid.Row="3"/>
+        <Button Name="switch" Content="войти в систему" Click="switch_Click" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="4"  FontSize="23" Background="HotPink" Margin="0,25,0,0" Grid.Column="1" Width="267"/>
+        <Button Name="login" Content="зарегистрируйся"  Grid.Row="5"  Background="HotPink" Height="40" Click="Click_login" Grid.ColumnSpan="2" Margin="266,11,0,21" FontSize="25"/>
     </Grid>
 </Window>
